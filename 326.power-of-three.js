@@ -1,0 +1,19 @@
+/*
+ * @lc app=leetcode id=326 lang=javascript
+ *
+ * [326] Power of Three
+ */
+
+// @lc code=start
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfThree = function(n) {
+  const sum = n.toString(3).split('').reduce((acc, val) => {
+    return acc + parseInt(val);
+  }, 0 );
+  return sum === 1 ? true: false;
+};
+// @lc code=end
+
