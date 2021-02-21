@@ -11,6 +11,10 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
+  // Take a number from the nums array
+  // Find the index of the other number after the first number that the sum of the two equals the target
+  // If the other number is not found
+  // Continue to try the next number
   for (let i = 0; i < nums.length; i++) {
     const index = nums.indexOf(target - nums[i], i + 1);
     if (index >= 0) {
