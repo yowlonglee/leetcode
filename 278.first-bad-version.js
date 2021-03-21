@@ -25,6 +25,7 @@ var solution = function(isBadVersion) {
      * @return {integer} The first bad version
      */
     return function(n) {
+        // Create two variables
         let max = n, min = 1;
 
         while(max - min > 1) {
