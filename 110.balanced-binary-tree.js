@@ -19,7 +19,7 @@
  */
 var isBalanced = function(root) {
   // An empty tree is balanced
-  if (root === []) return true;
+  if (!root) return true;
   // If we get false value on the root, means at least one of the subtree nodes is unbalanced.
   // We can say this tree is unbalanced.
   // Else we will get a true value of max tree depth. Then we can return true to say this is a balanced tree.
@@ -40,6 +40,7 @@ function balanceChecker(node) {
   // console.log({val, left, right});
 
   // If any subtree returns false value, pass the value to the root
+  // We're not using !node for comparison because 0 is also a falsy value.
   if (left === false || right === false) return false;
   // Else we calculate the depth from both trees.
   // If the difference is greater than 1, means this is an unbalanced tree node.
