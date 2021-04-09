@@ -27,11 +27,11 @@ var isBalanced = function(root) {
 };
 
 // A helper function to check subtrees in every node
-// Returns false if its subrees are unbalanced
+// Returns false if its subtrees are unbalanced
 // Else returns its maxium subtree depth
 function balanceChecker(node) {
   // Start counting tree depth from leaf
-  if (node === null) return 0;
+  if (!node.left && !node.right) return 0;
 
   // Check depth of left and right subtrees
   let left = balanceChecker(node.left);
